@@ -1,0 +1,15 @@
+version: "3.0"
+
+services:
+    hlds:
+        tty: true
+        stdin_open: true
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        container_name: "scorpius_ns"
+        ports:
+            - 26900:26900
+            - 27016:27016
+            - 27016:27016/udp
+
